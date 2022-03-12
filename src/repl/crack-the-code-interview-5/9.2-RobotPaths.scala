@@ -1,4 +1,4 @@
-rdef robotPaths(X: Int, Y: Int, offLimits: Set[(Int, Int)] = Set()): Long = {
+def robotPaths(X: Int, Y: Int, offLimits: Set[(Int, Int)] = Set()): Long = {
 	val robotPathCache = Array.ofDim[Long](100, 100)
 
 	def robotPathsR(x: Int, y: Int): Long = {

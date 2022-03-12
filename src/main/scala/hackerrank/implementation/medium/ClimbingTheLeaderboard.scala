@@ -1,23 +1,9 @@
-import java.io._
-import java.math._
-import java.security._
-import java.text._
-import java.util._
-import java.util.concurrent._
-import java.util.function._
-import java.util.regex._
-import java.util.stream._
-import scala.collection.immutable._
-import scala.collection.mutable._
-import scala.collection.concurrent._
-import scala.concurrent._
-import scala.io._
-import scala.math._
-import scala.sys._
-import scala.util.matching._
-import scala.reflect._
+package hackerrank.implementation.medium
 
-object Result {
+import java.io._
+import scala.io._
+
+object ClimbingTheLeaderboard {
 
     /*
      * Complete the 'climbingLeaderboard' function below.
@@ -31,7 +17,7 @@ object Result {
     def climbingLeaderboard1st(ranked: Array[Int], player: Array[Int]): Array[Int] = {
         var j = 0
         var rank = 1
-        val n = ranked.size
+        val n = ranked.length
          
         val ranks = player.reverse.map{ score =>
             while (j < n && score < ranked(j)) {
@@ -46,12 +32,12 @@ object Result {
     }
 
     def climbingLeaderboard(ranked: Array[Int], player: Array[Int]): Array[Int] = {
-        val ranks = new Array[Int](player.size)
+        val ranks = new Array[Int](player.length)
         var j = 0
         var rank = 1
-        val n = ranked.size
+        val n = ranked.length
         
-        for (i <- player.size - 1 to 0 by -1) {
+        for (i <- player.length - 1 to 0 by -1) {
             val score = player(i)
             
             while (j < n && score < ranked(j)) {
@@ -65,9 +51,6 @@ object Result {
         ranks
     }
 
-}
-
-object Solution {
     def main(args: Array[String]) {
         val printWriter = new PrintWriter(sys.env("OUTPUT_PATH"))
 
@@ -79,11 +62,10 @@ object Solution {
 
         val player = StdIn.readLine.replaceAll("\\s+$", "").split(" ").map(_.trim.toInt)
 
-        val result = Result.climbingLeaderboard(ranked, player)
+        val result = climbingLeaderboard(ranked, player)
 
         printWriter.println(result.mkString("\n"))
 
         printWriter.close()
     }
 }
-fv r
