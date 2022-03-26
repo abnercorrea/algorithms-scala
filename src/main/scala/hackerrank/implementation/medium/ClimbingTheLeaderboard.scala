@@ -1,7 +1,5 @@
 package hackerrank.implementation.medium
 
-import java.io._
-import scala.io._
 
 object ClimbingTheLeaderboard {
 
@@ -51,21 +49,12 @@ object ClimbingTheLeaderboard {
         ranks
     }
 
-    def main(args: Array[String]) {
-        val printWriter = new PrintWriter(sys.env("OUTPUT_PATH"))
-
-        val rankedCount = StdIn.readLine.trim.toInt
-
-        val ranked = StdIn.readLine.replaceAll("\\s+$", "").split(" ").map(_.trim.toInt)
-
-        val playerCount = StdIn.readLine.trim.toInt
-
-        val player = StdIn.readLine.replaceAll("\\s+$", "").split(" ").map(_.trim.toInt)
+    def main(args: Array[String]): Unit = {
+        val ranked = Array(100, 90, 90, 80)
+        val player = Array(5, 25, 75, 105)
 
         val result = climbingLeaderboard(ranked, player)
 
-        printWriter.println(result.mkString("\n"))
-
-        printWriter.close()
+        println(result.mkString("\n"))
     }
 }
