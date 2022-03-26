@@ -1,7 +1,7 @@
 package hackerrank.recursion.medium
 
 
-object PowerSum {
+object PowerSum extends App {
 
     def powerSumRec(x: Int, powers: Array[Int], sum: Int, i: Int): Int = {
         if (i == powers.length) return 0
@@ -27,10 +27,8 @@ object PowerSum {
         powerSumRec(x, powers, sum=0, i=0)
     }
 
-    def main(args: Array[String]): Unit = {
-        println(powerSum(10, 2))
-        println(powerSum(100, 2))
-        println(powerSum(100, 3))
-        println(powerSum(500, 2))
-    }
+    println(powerSum(10, 2))
+    println(powerSum(100, 2))
+    println(powerSum(100, 3))
+    println(powerSum(500, 2))
 }

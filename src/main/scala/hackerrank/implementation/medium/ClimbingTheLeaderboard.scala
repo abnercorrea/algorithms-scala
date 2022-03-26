@@ -1,7 +1,7 @@
 package hackerrank.implementation.medium
 
 
-object ClimbingTheLeaderboard {
+object ClimbingTheLeaderboard extends App {
 
     /*
      * Complete the 'climbingLeaderboard' function below.
@@ -49,12 +49,10 @@ object ClimbingTheLeaderboard {
         ranks
     }
 
-    def main(args: Array[String]): Unit = {
-        val ranked = Array(100, 90, 90, 80)
-        val player = Array(5, 25, 75, 105)
+    val ranked = Array(100, 90, 90, 80)
+    val player = Array(5, 25, 75, 105)
 
-        val result = climbingLeaderboard(ranked, player)
+    val result = climbingLeaderboard(ranked, player)
 
-        println(result.mkString("\n"))
-    }
+    println(result.mkString(", "))
 }
