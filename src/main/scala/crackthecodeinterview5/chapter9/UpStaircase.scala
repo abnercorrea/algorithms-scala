@@ -43,7 +43,7 @@ object UpStaircase extends App {
 		var nMinus2 = 2L
 		var nMinus3 = 1L
 
-		for (i <- 4 to n) {
+		for (_ <- 4 to n) {
 			N = nMinus1 + nMinus2 + nMinus3
 			nMinus3 = nMinus2
 			nMinus2 = nMinus1

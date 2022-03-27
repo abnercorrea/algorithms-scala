@@ -1,10 +1,12 @@
 package crackthecodeinterview5.chapter9
 
+import scala.annotation.tailrec
+
 object MagicIndex extends App {
 
     // brute force O(n)
     def magicIndex(A: Array[Int]): Int = {
-        for (i <- (0 to A.length - 1)) {
+        for (i <- A.indices) {
             if (A(i) == i) return i
             if (A(i) > i) return -1
         }
@@ -20,6 +22,7 @@ object MagicIndex extends App {
     def magicIndexBinSearch(A: Array[Int]): Int = {
         val end = A.length - 1
 
+        @tailrec
         def magicIndex(start: Int): Int = {
             if (start > end) return -1
 

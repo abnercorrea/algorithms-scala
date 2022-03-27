@@ -8,7 +8,7 @@ object Permutations extends App {
         val indexes = mutable.Set[Int]() ++ (0 until s.length)
         val results = mutable.ArrayBuffer[String]()
 
-        def permutations(index: Int) {
+        def permutations(index: Int): Unit = {
             if (index == s.length) {
                 results += new String(permutation)
 
@@ -31,5 +31,5 @@ object Permutations extends App {
     }
 
     println(permutations("ABC").mkString(","))
-    println(permutations("ABCDE").size)
+    println(permutations("ABCDE").length)
 }

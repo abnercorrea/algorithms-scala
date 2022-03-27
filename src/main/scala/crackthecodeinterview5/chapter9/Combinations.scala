@@ -52,6 +52,6 @@ object Combinations extends App {
 
     println("Pascal triangle:")
     for (n <- 0 to 10) {
-        println((0 to n).map(combinations((1 to n).toArray, _).length).toSeq.prettyPrint)
+        println((0 to n).map(combinations((1 to n).toArray, _).length).prettyPrint)
     }
 }
