@@ -51,5 +51,7 @@ object MagicIndex extends App {
         -1
     }
 
-
+    println(magicIndexBinSearchIt(Array(0,1,2,3,4,5,6)))
+    println(magicIndexBinSearchIt(Array(-1,0,1,6,7,8,9)))
+    println(magicIndexBinSearchIt(Array(-1,0,1,2,3,4,6)))
 }
